@@ -1,0 +1,11 @@
+.footer {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 100%;
+    color: #212121;
+    opacity: 70%;
+
+}

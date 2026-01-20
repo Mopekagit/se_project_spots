@@ -25,6 +25,3 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 [Link to the project pitch on Loom]
 (https://www.loom.com/share/e290174f81e64274b0a3a7ec61a6fa38)
-
-
-;lasd;lkfjas;lkfjas;dlkfja;slkdjf;asdf

@@ -1,15 +1,18 @@
 .card {
   max-width: 413px;
 
+
 }
 
 
 .card__image {
-  height: 413px;
-  width: 413px;
+  height: auto;
+  width: 100%;
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  margin-bottom: 12px;
+
 
 }
 
@@ -28,7 +31,10 @@
   width: 23px;
   border: none;
   background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
   opacity: 40%;
+
 
 
 }
@@ -47,8 +53,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 288px;
+  max-width: 353px;
   line-height: 120%;
+  margin: 0;
 
 }
 
@@ -74,6 +81,10 @@
     justify-items: center;
     justify-content: space-between;
     
+  }
+
+  .card__title {
+    max-width: 235px;
   }
   
 }

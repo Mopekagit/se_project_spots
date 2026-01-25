@@ -4,13 +4,6 @@
   border-bottom: 1px solid rgba(33,33,33,0.4);
 }
 
-@media (max-width: 627px) {
-  .profile {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
 .profile__avatar {
   margin-right: 20px;
   height: 190px;

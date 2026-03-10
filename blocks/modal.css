@@ -28,6 +28,7 @@
     max-width: 730px;
     width: 100%;
     border-radius: 8px;
+    box-sizing: border-box;
     background-color: #FFFFFF;
     padding: 32px 50px;
 
@@ -114,6 +115,11 @@
     font-size: 16px;
     line-height: 100%;
     color: #FCF5E5;
+    
+}
+
+.modal__submit-btn:hover {
+    cursor: pointer;
     
 }
 

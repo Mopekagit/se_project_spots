@@ -127,6 +127,8 @@
     align-self: center;
     height: 52px;
     width: 100%;
+    border: none;
+    
   }
 
   .profile__edit-btn {

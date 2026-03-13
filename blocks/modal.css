@@ -117,15 +117,25 @@
     line-height: 100%;
     color: #FCF5E5;
     border: none;
+    opacity: 1;
     
 }
 
 .modal__submit-btn:hover {
     cursor: pointer;
+    opacity: 0.7;
+
     
 }
 
 @media screen and (max-width: 627px)  {
+
+    .modal__content {
+        max-width: 300px;
+        padding: 10px;
+        
+    }
+
     .modal__submit-btn {
         max-width: none;
         

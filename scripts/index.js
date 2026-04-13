@@ -1,3 +1,37 @@
+const initialCards = [
+    {
+        name: "Daily Grind",
+        link: "https://unsplash.com/photos/person-doing-kick-flip-trick-eK_aInAXydw"
+    },
+
+    {
+        name: "Spring Things",
+        link: "https://unsplash.com/photos/pink-flower-field-under-blue-sky-during-daytime-33B6ZhM0YaI"
+    },
+
+    {
+        name: "Roughing It",
+        link: "https://unsplash.com/photos/person-holding-mug-qkMQ5N2d9aY"
+    },
+
+    {
+        name: "Adventure Time",
+        link: "https://unsplash.com/photos/person-riding-airplane-photography-jv15x2Gs5F8"
+    },
+
+    {
+        name: "Health Kick",
+        link: "http://unsplash.com/photos/pizza-on-chopping-board-MqT0asuoIcU"
+    },
+
+    {
+        name: "Feeling Creative",
+        link: "https://unsplash.com/photos/a-wooden-table-topped-with-a-palette-of-paint-vpflEzQ8-HM"
+    }
+];
+
+
+
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -72,5 +106,8 @@ function handleAddCardSubmit(evt) {
 
 newPostForm.addEventListener('submit', handleAddCardSubmit);
 
+initialCards.forEach(function (item) {
+    console.log(item.name);
+    console.log(item.link);
 
-
+});

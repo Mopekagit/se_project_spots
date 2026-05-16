@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 627px) {
-  .grid {
+  .cardslist {
     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   }
   

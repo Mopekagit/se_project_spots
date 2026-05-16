@@ -56,12 +56,12 @@
   border: none;
   display: flex;
   gap: 8px;
-  opacity: 70%;
+  opacity: .7;
   
 }
 
 .profile__edit-btn:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 
 }
@@ -88,7 +88,7 @@
 }
 
 .profile__add-btn:hover {
-  opacity: 80%;
+  opacity: .8;
   cursor: pointer;
 
 }

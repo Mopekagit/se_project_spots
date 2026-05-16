@@ -1,5 +1,4 @@
 const initialCards = [
-
     {
         name: "Daily Grind",
         link: "https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -39,7 +38,7 @@ const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector("#profile-name-input");
-const editProfileNameDescriptionInput = editProfileModal.querySelector("#profile-description-input");
+const editProfileDescriptionInput = editProfileModal.querySelector("#profile-description-input");
 
 
 const newPostBtn = document.querySelector(".profile__add-btn");
@@ -65,7 +64,7 @@ const previewCaptionEl = previewModal.querySelector(".modal__caption");
 const cardTemplate = document
 .querySelector("#card-template")
 .content.querySelector(".card");
-const cardsList = document.querySelector(".cards__list")
+const cardsList = document.querySelector(".cards__list");
 
 
 

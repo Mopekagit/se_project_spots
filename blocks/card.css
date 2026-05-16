@@ -13,9 +13,11 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
 
 
 }
+
 
 .card__delete-btn {
   width: 32px;
@@ -29,11 +31,11 @@
 
 }
 
+
 .card__delete-btn:hover {
   background-image: url(../images/DeleteButtonHover.svg);
   cursor: pointer;
 }
-
 
 
 .card__content {
@@ -53,12 +55,12 @@
   background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 40%;
+  opacity: .4;
 
 }
 
 .card__like-btn:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 
 }

@@ -96,7 +96,7 @@ function getCardElement(data) {
 
     });
 
-    const previewModalCloseBtn = previewModal.querySelector(".modal__close_type_preview");
+    const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn_type_preview");
 
     previewModalCloseBtn.addEventListener("click", function () {
         closeModal(previewModal);

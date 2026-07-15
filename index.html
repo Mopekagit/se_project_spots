@@ -60,24 +60,32 @@ other users. As well as make small adjustments to their own profile. " />
         <img src="./images/CloseButton.svg" alt="Close button" />
         </button>
         <h2 class="modal__title">Edit Profile</h2>
-        <form class="modal__form">
+        <form class="modal__form"> 
           <label for="profile-name-input" class="modal__label">
             Name
             <input 
             id="profile-name-input" 
             type="text" 
+            minlength="2";
+            maxlength="40"
             class="modal__input" 
             placeholder="Type your name"
+            required
             />
+            <span class="modal__error" id="profile-name-input-error"></span>
           </label>
           <label for="profile-description-input" class="modal__label">
             Description
             <input 
             id="profile-description-input" 
             type="text" 
+            minlength="2";
+            maxlength="200"
             class="modal__input" 
             placeholder="Describe yourself"
+            required
             />
+            <span class="modal__error" id="profile-description-input-error"></span>
           </label>
           <button 
           type="submit"
@@ -98,21 +106,25 @@ other users. As well as make small adjustments to their own profile. " />
             Image link
             <input 
             id="card-image-input" 
-            type="url" 
+            type="url"  
             class="modal__input" 
             placeholder="Place a link to the picture"
             required
             />
+            <span class="modal__error" id="card-image-input-error"></span>
           </label>
           <label for="card-caption-input" class="modal__label">
             Caption
             <input 
             id="card-caption-input" 
             type="text" 
+            minlength="2";
+            maxlength="30"
             class="modal__input" 
             placeholder="Type your caption"
             required
             />
+            <span class="modal__error" id="card-caption-input-error"></span>
           </label>
           <button 
           type="submit"
@@ -135,7 +147,8 @@ other users. As well as make small adjustments to their own profile. " />
         />
         <p class="modal__caption"></p>
       </div>
-    </div>
+    </div> 
+  <script src="./scripts/validation.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

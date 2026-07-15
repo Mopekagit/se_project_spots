@@ -44,6 +44,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector("#profile-des
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
 const profileNameEl = document.querySelector(".profile__name");
@@ -56,7 +57,7 @@ const newPostImageLinkInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
 
 const previewModal = document.querySelector("#preview-modal");
-const previewModalCloseBtn = previewModal.querySelector(".modal__close");
+const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
 
@@ -102,27 +103,33 @@ function getCardElement(data) {
         closeModal(previewModal);
     })
   
-
-    
-
     return cardElement;
 }
 
 function openModal(modal) {
-    modal.classList.add("modal_is-opened");
+    modal.classList.add("modal_is-opened")
 
-}
+    }
+    
 
 function closeModal(modal) {
     modal.classList.remove("modal_is-opened");
+}
 
+
+function handleEditProfileSubmit(evt) {
+    evt.preventDefault();
+    profileNameEl.textContent = editProfileNameInput.value;
+    profileDescriptionEl.textContent = editProfileDescriptionInput.value;
+    closeModal(editProfileModal);
 }
 
 editProfileBtn.addEventListener("click", function() {
    editProfileNameInput.value = profileNameEl.textContent;
-   editProfileNameDescriptionInput.value = profileDescriptionEl.textContent;
+   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+   resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput], settings)
    openModal(editProfileModal);
-}) 
+}); 
 
 editProfileCloseBtn.addEventListener("click", function () {
     closeModal(editProfileModal);
@@ -130,38 +137,53 @@ editProfileCloseBtn.addEventListener("click", function () {
 })
 
 newPostBtn.addEventListener("click", function() {
+    newPostForm.reset();
     openModal(newPostModal);
 
 })
 
 newPostCloseBtn.addEventListener("click", function() {
+    resetValidation(newPostForm, [newPostCaptionInput, newPostImageLinkInput], settings )
     closeModal(newPostModal);
 
 })
 
 
 
-function handleEditProfileSubmit(evt) {
-    evt.preventDefault();
-    profileNameEl.textContent = editProfileNameInput.value;
-    profileDescriptionEl.textContent = editProfileNameDescriptionInput.value;
-    closeModal(editProfileModal);
-}
+const modalAltClose = document.querySelectorAll(".modal")
+    modalAltClose.forEach((modal) => {
+    modal.addEventListener("click" , function(evt) {
+       if (evt.target.classList.contains("modal")) {
+        closeModal(modal);
+       }
+        })
+    });
+
+const modalEscClose = document.querySelectorAll(".modal")
+    modalEscClose.forEach((modal) => {
+    document.addEventListener("keydown" , function(evt) {
+       if (evt.key === 'Escape') {
+        closeModal(modal);
+       }
+        })
+    });
+
+
+
 
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
     evt.preventDefault();
-    
     const inputValues = {
         link: newPostImageLinkInput.value,
         name: newPostCaptionInput.value,
     };
-
     const cardElement = getCardElement(inputValues);
     cardsList.prepend(cardElement);
-
+    evt.target.reset();
+    disableButton(newPostSubmitBtn, settings);
     closeModal(newPostModal);
     newPostForm.reset();
 }

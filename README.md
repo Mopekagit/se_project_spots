@@ -24,4 +24,7 @@ The way you'll do this at work is by exporting images directly from Figma — we
 (https://mopekagit.github.io/se_project_spots/)
 
 [Link to the project pitch on Loom]
+[MatthewOpeka-ProjectPitch-SpotsStage1] 
 (https://www.loom.com/share/e290174f81e64274b0a3a7ec61a6fa38)
+[MatthewOpeka=ProjectPitch=spotsStage9]
+(https://www.loom.com/share/562144f916a84e80836d6fd7a10699a8)
